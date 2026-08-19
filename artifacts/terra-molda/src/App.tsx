@@ -1,4 +1,5 @@
 import { type FormEvent, useEffect, useState } from 'react';
+import terraMoldaLogo from '@assets/image_1787163531840.png';
 import {
   ArrowDownRight,
   ArrowRight,
@@ -64,18 +65,15 @@ function Logo({ light = false }: { light?: boolean }) {
   return (
     <a
       href="#inicio"
-      className="flex items-center gap-3 no-underline"
+      className="flex items-center no-underline"
       aria-label="Terra Molda, voltar ao início"
       data-testid="link-logo"
     >
-      <span
-        className={`flex h-10 w-10 items-center justify-center rounded-full ${light ? 'bg-[#d3de9e] text-[#304527]' : 'bg-[#d5df9f] text-[#344d2b]'}`}
-      >
-        <Leaf size={20} strokeWidth={1.8} />
-      </span>
-      <span className={`text-[18px] font-bold tracking-[-0.04em] ${light ? 'text-[#f1eedf]' : 'text-[#344d2b]'}`}>
-        terra <span className="font-normal">molda</span>
-      </span>
+      <img
+        src={terraMoldaLogo}
+        alt="Terra Molda — embalagens biodegradáveis"
+        className={`h-[54px] w-[132px] object-contain object-left mix-blend-multiply ${light ? 'brightness-[1.25]' : ''}`}
+      />
     </a>
   );
 }
